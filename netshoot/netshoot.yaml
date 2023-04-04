@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netshoot-1
+  labels:
+    app: netshoot-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netshoot-1
+  template:
+    metadata:
+      labels:
+        app: netshoot-1
+    spec:
+      containers:
+        - name: netshoot-1
+          image: nicolaka/netshoot
+          command: ["/bin/bash"]
+          args: ["-c", "while true; do ping localhost; sleep 60;done"]
