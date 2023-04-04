@@ -6,3 +6,7 @@ metadata:
     config.kubernetes.io/local-config: "true"
 info:
   description: test blueprint for cilium bgp
+pipeline:
+  validators:
+  - image: gcr.io/kpt-fn/kubeval:v0.3.0
+    configPath: kubeval-config.yaml
