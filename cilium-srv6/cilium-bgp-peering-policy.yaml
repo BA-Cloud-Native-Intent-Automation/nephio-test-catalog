@@ -13,7 +13,7 @@ spec:
     exportPodCIDR: true
     mapSRv6VRFs: true
     neighbors:
-    - peerAddress: "10.12.10.1"
+    - peerAddress: "10.12.10.1/32"
       peerASN: 66000
 
       
